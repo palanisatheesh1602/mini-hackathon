@@ -4,26 +4,40 @@
     </head>
     <body>
         <h1>Factorial Number</h1>
-        <button>Click</button>
         <div class="tip"></div>
     </body>
 
 
     <script>
-         button = document.querySelector("button")
-         let num=5,fact=1
-         output = document.querySelector(".tip")
+        //  button = document.querySelector("button")
+        //  let num=100,fact=1
+        //  output = document.querySelector(".tip")
 
-         function message()
-         {
-             for(i=1;i<=num ;i++)
-             {
-                 fact=fact*i;
-                 output.innerText = `${fact}`
-             }
+        //  function message()
+        //  {
+        //     //  for(i=1;i<=num ;i++)
+        //     //  {
+        //     //      fact=fact*i;
+        //     //      output.innerText = `${fact}`    
+        //     //  }
              
-         }
-         button.addEventListener("click",message)
-
-    </script>
+        //  }
+        //  button.addEventListener("click",message)
+        function message(n)
+        {
+         
+            if(n < 0) 
+              return -1;
+            let count = 0;
+            for (let i = 5;(n / i) >= 1; i *= 5)
+                count +=(n / i);
+         
+            return count;
+        }
+            let n = 20;
+            document.write("Number of 0's is  " + 20
+                + "! is " + message(n));
+         
+        </script>
+    
 </html>

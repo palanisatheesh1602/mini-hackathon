@@ -24,15 +24,13 @@
                     if(name[i]==name[j] && name[i]!="")
                     {
                         count++;
-                        name[i]="0";
+                        name[j]="0";
                     }
                 }
-                if(count>1 && name[i]!="0")
-                {
-                    output.innerText =`${name[i]}`
-                }
+                
             }
         }
+        
         button.addEventListener("click", message)
     </script>
 </html>
