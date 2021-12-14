@@ -13,6 +13,7 @@
     <script>
         button = document.querySelector("button")
         let name = "satheesh",count=0
+        let duplicate=""
         output = document.querySelector(".tip")
 
         function message()
@@ -21,13 +22,16 @@
             {
                 for(j=i+1;j<name.length;j++)
                 {
-                    if(name[i]==name[j] && name[i]!="")
+                    if(name[i]==name[j] && name[i]!=" ")
                     {
                         count++;
-                        name[j]="0";
+                        name[j]="0"; 
+                        duplicate+= name[i];
+                        console.log(name[i])
+                        output.innerText =`${duplicate}`
+
                     }
                 }
-                
             }
         }
         

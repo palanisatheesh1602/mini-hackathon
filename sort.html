@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Sorting</title>
+    </head>
+    <body>
+        <h1>Sort and Merging</h1>
+    </body>
+
+    <script>
+    function message(arr , a,  output)
+    {
+        var c = 0;
+        for (i = 0; i < a; i++) {
+            for (j = 0; j < 4; j++)
+                output[c++] = arr[i][j];
+        }
+        output.sort((a,b)=>a-b);
+    }
+    function call(arr , size) {
+        for (i = 0; i < size; i++)
+            document.write(arr[i] + " ");
+    }
+     
+        var arr = [ [ 4, 2, 11, 54 ],
+                    [ 13, 7, 31, 41 ],
+                    [ 15, 55, 70, 20 ] ];
+        var k = 4;
+        var n = 3;
+        var output = Array(n * k);
+ 
+        message(arr, n, output);
+ 
+        document.write("Array is ");
+        call(output, n * k);
+</script>
+</html>
