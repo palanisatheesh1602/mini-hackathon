@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Hello</title>
+    </head>
+    <body>
+        <h2>Duplicate String</h2>
+        <button>Click</button>
+        <div class="tip"></div>
+    </body>
+
+
+
+    <script>
+        button = document.querySelector("button")
+        let name = "satheesh",count=0
+        output = document.querySelector(".tip")
+
+        function message()
+        {
+            for(i=0;i<name.length;i++)
+            {
+                for(j=i+1;j<name.length;j++)
+                {
+                    if(name[i]==name[j] && name[i]!="")
+                    {
+                        count++;
+                        name[i]="0";
+                    }
+                }
+                if(count>1 && name[i]!="0")
+                {
+                    output.innerText =`${name[i]}`
+                }
+            }
+        }
+        button.addEventListener("click", message)
+    </script>
+</html>
