@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Welcome</title>
+    </head>
+    <body>
+        <h1>Factorial Number</h1>
+        <button>Click</button>
+        <div class="tip"></div>
+    </body>
+
+
+    <script>
+         button = document.querySelector("button")
+         let num=5,fact=1
+         output = document.querySelector(".tip")
+
+         function message()
+         {
+             for(i=1;i<=num ;i++)
+             {
+                 fact=fact*i;
+                 output.innerText = `${fact}`
+             }
+             
+         }
+         button.addEventListener("click",message)
+
+    </script>
+</html>
